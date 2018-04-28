@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wave Music</title>
+        <link rel="stylesheet" href="/src/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    </head>
+    <body>
+        <div id="home" class="page">
+            <h1>Wave Music</h1>
+            <div class="item" id="songs-card" style="--grad-start:#1675d1;--grad-end:#00796b;" onclick="setPage('songs')">
+                <h2>Songs</h2>
+                <p>All Your Collection, in One Place.</p>
+            </div>
+            <div class="item" id="albums-card" style="--grad-start:#fbc02d;--grad-end:#689f38;" onclick="setPage('albums')">
+                <h2>Albums</h2>
+                <p>All your saved Albums</p>
+            </div>
+            <div class="item" id="playlists-card" style="--grad-start:#e53935;--grad-end:#ffa000;" onclick="setPage('playlists')">
+                <h2>Playlists</h2>
+                <p>Playlists for However You're Feeling</p>
+            </div>
+            <div class="item" id="options-card" style="--grad-start:#7b1fa2;--grad-end:#303f9f;" onclick="setPage('options')">
+                <h2>Options</h2>
+                <p>Coniguration of linked accounts</p>
+            </div>
+            <h2>Recent Songs<hr></h2>
+            
+        </div>
+        <div id="songs" class="page">
+            <h1><i class="material-icons" onclick="setPage('')">arrow_back</i> Songs</h1>
+            <h2>Upload a Song: <button onclick="uploadFile()">Upload</button><hr></h2>
+        </div>
+        <div id="albums" class="page">
+            <h1><i class="material-icons" onclick="setPage('')">arrow_back</i> Albums</h1>
+        </div>
+        <div id="playlists" class="page">
+            <h1><i class="material-icons" onclick="setPage('')">arrow_back</i> Playlists</h1>
+        </div>
+        <div id="options" class="page">
+            <h1><i class="material-icons" onclick="setPage('')">arrow_back</i> Options</h1>
+            <div class="item" style="--grad-start:#1675d1;--grad-end:#00796b;">
+                <h2>Link a Spotify Account (Beta)</h2>
+                <p>By linking a Spotify account, you gain access to your entire Spotify library, without the need to upload.<br>
+                Songs, Albums, and Playlists you've saved on Spotify will appear among your uploaded songs.<br><br>
+                <button onclick="linkToSpotify()">Link Spotify Account</button></p>
+            </div>
+            <div class="item" style="--grad-start:#fbc02d;--grad-end:#689f38;">
+                <h2>Upload Music</h2>
+                <p>Uploading your Music to Wave adds it to your Songs list. This also allows you to add it to local playlists.<br>
+                The song will be saved on your device so it functions, even when offline. To remove a song, simply locate the song in the songs list, tap the more button, and tap delete.<br><br>
+                <button onclick="uploadFile()">Upload</button></p>
+            </div>
+            <div class="item" style="--grad-start:#e53935;--grad-end:#ffa000;">
+                <h2>Theme</h2>
+                <p>Wave music has three theme options. The themes are light (default), dark, and black. You can set a theme, or automatically set it based on the time of day.</p>
+            </div>
+        </div>
+        <div id="bottomBar">
+            <p>No Song</p>
+            <audio id="audioControls" autoplay controls></audio>
+        </div>
+        <div id="songInfoOverlay" class="dialogContainer">
+            <div class="dialog">
+                <h2>Song<hr></h2>
+                <p></p>
+            </div>
+            <div class="bgeffect"></div>
+        </div>
+        <script src="/src/jam.js"></script>
+        <script src="/src/javascript.js"></script>
+    </body>
+</html>
