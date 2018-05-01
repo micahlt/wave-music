@@ -4,7 +4,7 @@
     "name": "Wave Music",
     "scope": "/wave-music/",
     "display": "standalone",
-    "start_url": "https://jgames101.github.io/wave-music/",
+    "start_url": "/wave-music/",
     "short_name": "Wave",
     "theme_color": "#485580",
     "description": "Music Player For The World",
