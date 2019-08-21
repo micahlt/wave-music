@@ -146,6 +146,21 @@ body {
 .dialogContainer[open]{
     display:initial;
 }
+.materialButton {
+    background-color: #ffffff; 
+    border: none; 
+    border-radius: 5px; 
+    color: black; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    transition: 0.3s;
+}
+.materialButton:hover {
+    box-shadow: 5px 10px 20px -2px black;}
 .bgeffect {
     position:fixed;
     top:0px;
